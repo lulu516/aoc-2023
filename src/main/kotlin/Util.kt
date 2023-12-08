@@ -14,3 +14,16 @@ fun String.toPair(): Pair<Char, Char> = Pair(this[0], this[1])
 fun Int.sigma(): Int = if (this == 0) 0 else (1..this).sum()
 
 fun List<Int>.concatToInt(): Int = Integer.valueOf(this.joinToString(""))
+
+fun Long.findLCM(b: Long): Long {
+    val larger = if (this > b) this else b
+    val maxLcm = this * b
+    var lcm = larger
+    while (lcm <= maxLcm) {
+        if (lcm % this == 0L && lcm % b == 0L) {
+            return lcm
+        }
+        lcm += larger
+    }
+    return maxLcm
+}
