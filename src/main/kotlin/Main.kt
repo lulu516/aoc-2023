@@ -2,13 +2,13 @@ import kotlin.time.measureTime
 
 fun main() {
     measureTime {
-        println("part 1: " + Day8().part1())
+        println("part 1: " + Day9().part1())
     }.let {
         println("part 1 execution time: " + it.inWholeMilliseconds + "ms")
     }
 
     measureTime {
-        println("part 2: " + Day8().part2())
+        println("part 2: " + Day9().part2())
     }.let {
         println("part 2 execution time: " + it.inWholeMilliseconds + "ms")
     }
